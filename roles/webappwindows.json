@@ -1,0 +1,13 @@
+{
+    "name": "webappwindows",
+    "description": "Role to configure all install Web application on Windows",
+    "chef_type": "role",
+    "json_class": "Chef::Role",
+    "default_attributes": {
+    },
+    "override_attributes": {
+    },
+    "run_list": [
+        "recipe[webappwindows]"
+    ]
+}
