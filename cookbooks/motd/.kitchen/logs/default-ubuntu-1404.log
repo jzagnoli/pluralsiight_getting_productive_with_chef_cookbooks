@@ -1,0 +1,128 @@
+I, [2016-11-13T12:30:15.328797 #1048]  INFO -- default-ubuntu-1404: -----> Creating <default-ubuntu-1404>...
+I, [2016-11-13T12:30:17.509964 #1048]  INFO -- default-ubuntu-1404: Bringing machine 'default' up with 'virtualbox' provider...
+I, [2016-11-13T12:30:17.712606 #1048]  INFO -- default-ubuntu-1404: ==> default: Importing base box 'bento/ubuntu-14.04'...
+I, [2016-11-13T12:31:11.059962 #1048]  INFO -- default-ubuntu-1404: [KProgress: 10%[KProgress: 20%[KProgress: 40%[KProgress: 70%[KProgress: 90%[K==> default: Matching MAC address for NAT networking...
+I, [2016-11-13T12:31:11.400542 #1048]  INFO -- default-ubuntu-1404: ==> default: Checking if box 'bento/ubuntu-14.04' is up to date...
+I, [2016-11-13T12:31:13.001261 #1048]  INFO -- default-ubuntu-1404: ==> default: Setting the name of the VM: kitchen-motd-default-ubuntu-1404_default_1479065472941_62966
+I, [2016-11-13T12:31:15.080480 #1048]  INFO -- default-ubuntu-1404: ==> default: Fixed port collision for 22 => 2222. Now on port 2200.
+I, [2016-11-13T12:31:15.167658 #1048]  INFO -- default-ubuntu-1404: ==> default: Clearing any previously set network interfaces...
+I, [2016-11-13T12:31:15.252096 #1048]  INFO -- default-ubuntu-1404: ==> default: Preparing network interfaces based on configuration...
+I, [2016-11-13T12:31:15.252096 #1048]  INFO -- default-ubuntu-1404:     default: Adapter 1: nat
+I, [2016-11-13T12:31:15.316949 #1048]  INFO -- default-ubuntu-1404: ==> default: Forwarding ports...
+I, [2016-11-13T12:31:15.455294 #1048]  INFO -- default-ubuntu-1404:     default: 22 (guest) => 2200 (host) (adapter 1)
+I, [2016-11-13T12:31:15.668369 #1048]  INFO -- default-ubuntu-1404: ==> default: Running 'pre-boot' VM customizations...
+I, [2016-11-13T12:31:15.732311 #1048]  INFO -- default-ubuntu-1404: ==> default: Booting VM...
+I, [2016-11-13T12:31:19.776806 #1048]  INFO -- default-ubuntu-1404: There was an error while executing `VBoxManage`, a CLI used by Vagrant
+I, [2016-11-13T12:31:19.776806 #1048]  INFO -- default-ubuntu-1404: for controlling VirtualBox. The command and stderr is shown below.
+I, [2016-11-13T12:31:19.776806 #1048]  INFO -- default-ubuntu-1404: 
+I, [2016-11-13T12:31:19.776806 #1048]  INFO -- default-ubuntu-1404: Command: ["startvm", "da178394-1b69-4eef-9515-14c0145cd3aa", "--type", "headless"]
+I, [2016-11-13T12:31:19.776806 #1048]  INFO -- default-ubuntu-1404: 
+I, [2016-11-13T12:31:19.776806 #1048]  INFO -- default-ubuntu-1404: Stderr: VBoxManage.exe: error: The configured driver wasn't found. Either the necessary driver modules wasn't loaded, the name was misspelled, or it was a misconfiguration. (VERR_PDM_DRIVER_NOT_FOUND)
+I, [2016-11-13T12:31:19.776806 #1048]  INFO -- default-ubuntu-1404: VBoxManage.exe: error: Details: code E_FAIL (0x80004005), component ConsoleWrap, interface IConsole
+E, [2016-11-13T12:31:19.814562 #1048] ERROR -- default-ubuntu-1404: Create failed on instance <default-ubuntu-1404>.
+E, [2016-11-13T12:31:19.814562 #1048] ERROR -- default-ubuntu-1404: ------Exception-------
+E, [2016-11-13T12:31:19.814562 #1048] ERROR -- default-ubuntu-1404: Class: Kitchen::ShellOut::ShellCommandFailed
+E, [2016-11-13T12:31:19.814562 #1048] ERROR -- default-ubuntu-1404: Message: Expected process to exit with [0], but received '1'
+---- Begin output of vagrant up --no-provision --provider virtualbox ----
+STDOUT: Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Importing base box 'bento/ubuntu-14.04'...
+[KProgress: 10%[KProgress: 20%[KProgress: 40%[KProgress: 70%[KProgress: 90%[K==> default: Matching MAC address for NAT networking...
+==> default: Checking if box 'bento/ubuntu-14.04' is up to date...
+==> default: Setting the name of the VM: kitchen-motd-default-ubuntu-1404_default_1479065472941_62966
+==> default: Fixed port collision for 22 => 2222. Now on port 2200.
+==> default: Clearing any previously set network interfaces...
+==> default: Preparing network interfaces based on configuration...
+    default: Adapter 1: nat
+==> default: Forwarding ports...
+    default: 22 (guest) => 2200 (host) (adapter 1)
+==> default: Running 'pre-boot' VM customizations...
+==> default: Booting VM...
+STDERR: There was an error while executing `VBoxManage`, a CLI used by Vagrant
+for controlling VirtualBox. The command and stderr is shown below.
+
+Command: ["startvm", "da178394-1b69-4eef-9515-14c0145cd3aa", "--type", "headless"]
+
+Stderr: VBoxManage.exe: error: The configured driver wasn't found. Either the necessary driver modules wasn't loaded, the name was misspelled, or it was a misconfiguration. (VERR_PDM_DRIVER_NOT_FOUND)
+VBoxManage.exe: error: Details: code E_FAIL (0x80004005), component ConsoleWrap, interface IConsole
+---- End output of vagrant up --no-provision --provider virtualbox ----
+Ran vagrant up --no-provision --provider virtualbox returned 1
+E, [2016-11-13T12:31:19.814562 #1048] ERROR -- default-ubuntu-1404: ----------------------
+E, [2016-11-13T12:31:19.815537 #1048] ERROR -- default-ubuntu-1404: ------Backtrace-------
+E, [2016-11-13T12:31:19.815537 #1048] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/shell_out.rb:73:in `rescue in run_command'
+E, [2016-11-13T12:31:19.815537 #1048] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/shell_out.rb:61:in `run_command'
+E, [2016-11-13T12:31:19.815537 #1048] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/kitchen-vagrant-0.20.0/lib/kitchen/driver/vagrant.rb:343:in `run_command'
+E, [2016-11-13T12:31:19.815537 #1048] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/kitchen-vagrant-0.20.0/lib/kitchen/driver/vagrant.rb:302:in `run'
+E, [2016-11-13T12:31:19.815537 #1048] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/kitchen-vagrant-0.20.0/lib/kitchen/driver/vagrant.rb:373:in `run_vagrant_up'
+E, [2016-11-13T12:31:19.815537 #1048] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/kitchen-vagrant-0.20.0/lib/kitchen/driver/vagrant.rb:96:in `create'
+E, [2016-11-13T12:31:19.815537 #1048] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:449:in `public_send'
+E, [2016-11-13T12:31:19.815537 #1048] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:449:in `block in perform_action'
+E, [2016-11-13T12:31:19.815537 #1048] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:510:in `call'
+E, [2016-11-13T12:31:19.815537 #1048] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:510:in `block in synchronize_or_call'
+E, [2016-11-13T12:31:19.815537 #1048] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:508:in `synchronize'
+E, [2016-11-13T12:31:19.815537 #1048] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:508:in `synchronize_or_call'
+E, [2016-11-13T12:31:19.815537 #1048] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:478:in `block in action'
+E, [2016-11-13T12:31:19.815537 #1048] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/2.1.0/benchmark.rb:279:in `measure'
+E, [2016-11-13T12:31:19.815537 #1048] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:477:in `action'
+E, [2016-11-13T12:31:19.815537 #1048] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:449:in `perform_action'
+E, [2016-11-13T12:31:19.815537 #1048] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:359:in `create_action'
+E, [2016-11-13T12:31:19.815537 #1048] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:348:in `block in transition_to'
+E, [2016-11-13T12:31:19.815537 #1048] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:347:in `each'
+E, [2016-11-13T12:31:19.815537 #1048] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:347:in `transition_to'
+E, [2016-11-13T12:31:19.816513 #1048] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:127:in `create'
+E, [2016-11-13T12:31:19.816513 #1048] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/command.rb:201:in `public_send'
+E, [2016-11-13T12:31:19.816513 #1048] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/command.rb:201:in `run_action_in_thread'
+E, [2016-11-13T12:31:19.816513 #1048] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/command.rb:173:in `block (2 levels) in run_action'
+E, [2016-11-13T12:31:19.816513 #1048] ERROR -- default-ubuntu-1404: ----End Backtrace-----
+E, [2016-11-13T12:31:19.816513 #1048] ERROR -- default-ubuntu-1404: ---Nested Exception---
+E, [2016-11-13T12:31:19.816513 #1048] ERROR -- default-ubuntu-1404: Class: Mixlib::ShellOut::ShellCommandFailed
+E, [2016-11-13T12:31:19.816513 #1048] ERROR -- default-ubuntu-1404: Message: Expected process to exit with [0], but received '1'
+---- Begin output of vagrant up --no-provision --provider virtualbox ----
+STDOUT: Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Importing base box 'bento/ubuntu-14.04'...
+[KProgress: 10%[KProgress: 20%[KProgress: 40%[KProgress: 70%[KProgress: 90%[K==> default: Matching MAC address for NAT networking...
+==> default: Checking if box 'bento/ubuntu-14.04' is up to date...
+==> default: Setting the name of the VM: kitchen-motd-default-ubuntu-1404_default_1479065472941_62966
+==> default: Fixed port collision for 22 => 2222. Now on port 2200.
+==> default: Clearing any previously set network interfaces...
+==> default: Preparing network interfaces based on configuration...
+    default: Adapter 1: nat
+==> default: Forwarding ports...
+    default: 22 (guest) => 2200 (host) (adapter 1)
+==> default: Running 'pre-boot' VM customizations...
+==> default: Booting VM...
+STDERR: There was an error while executing `VBoxManage`, a CLI used by Vagrant
+for controlling VirtualBox. The command and stderr is shown below.
+
+Command: ["startvm", "da178394-1b69-4eef-9515-14c0145cd3aa", "--type", "headless"]
+
+Stderr: VBoxManage.exe: error: The configured driver wasn't found. Either the necessary driver modules wasn't loaded, the name was misspelled, or it was a misconfiguration. (VERR_PDM_DRIVER_NOT_FOUND)
+VBoxManage.exe: error: Details: code E_FAIL (0x80004005), component ConsoleWrap, interface IConsole
+---- End output of vagrant up --no-provision --provider virtualbox ----
+Ran vagrant up --no-provision --provider virtualbox returned 1
+E, [2016-11-13T12:31:19.816513 #1048] ERROR -- default-ubuntu-1404: ----------------------
+E, [2016-11-13T12:31:19.816513 #1048] ERROR -- default-ubuntu-1404: ------Backtrace-------
+E, [2016-11-13T12:31:19.816513 #1048] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/shell_out.rb:73:in `rescue in run_command'
+E, [2016-11-13T12:31:19.816513 #1048] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/shell_out.rb:61:in `run_command'
+E, [2016-11-13T12:31:19.816513 #1048] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/kitchen-vagrant-0.20.0/lib/kitchen/driver/vagrant.rb:343:in `run_command'
+E, [2016-11-13T12:31:19.816513 #1048] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/kitchen-vagrant-0.20.0/lib/kitchen/driver/vagrant.rb:302:in `run'
+E, [2016-11-13T12:31:19.816513 #1048] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/kitchen-vagrant-0.20.0/lib/kitchen/driver/vagrant.rb:373:in `run_vagrant_up'
+E, [2016-11-13T12:31:19.816513 #1048] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/kitchen-vagrant-0.20.0/lib/kitchen/driver/vagrant.rb:96:in `create'
+E, [2016-11-13T12:31:19.817491 #1048] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:449:in `public_send'
+E, [2016-11-13T12:31:19.817491 #1048] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:449:in `block in perform_action'
+E, [2016-11-13T12:31:19.817491 #1048] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:510:in `call'
+E, [2016-11-13T12:31:19.817491 #1048] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:510:in `block in synchronize_or_call'
+E, [2016-11-13T12:31:19.817491 #1048] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:508:in `synchronize'
+E, [2016-11-13T12:31:19.817491 #1048] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:508:in `synchronize_or_call'
+E, [2016-11-13T12:31:19.817491 #1048] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:478:in `block in action'
+E, [2016-11-13T12:31:19.817491 #1048] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/2.1.0/benchmark.rb:279:in `measure'
+E, [2016-11-13T12:31:19.817491 #1048] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:477:in `action'
+E, [2016-11-13T12:31:19.817491 #1048] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:449:in `perform_action'
+E, [2016-11-13T12:31:19.817491 #1048] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:359:in `create_action'
+E, [2016-11-13T12:31:19.817491 #1048] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:348:in `block in transition_to'
+E, [2016-11-13T12:31:19.817491 #1048] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:347:in `each'
+E, [2016-11-13T12:31:19.817491 #1048] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:347:in `transition_to'
+E, [2016-11-13T12:31:19.817491 #1048] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:127:in `create'
+E, [2016-11-13T12:31:19.817491 #1048] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/command.rb:201:in `public_send'
+E, [2016-11-13T12:31:19.817491 #1048] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/command.rb:201:in `run_action_in_thread'
+E, [2016-11-13T12:31:19.817491 #1048] ERROR -- default-ubuntu-1404: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/command.rb:173:in `block (2 levels) in run_action'
+E, [2016-11-13T12:31:19.817491 #1048] ERROR -- default-ubuntu-1404: ----End Backtrace-----

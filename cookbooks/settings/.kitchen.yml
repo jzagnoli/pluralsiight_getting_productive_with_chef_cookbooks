@@ -14,7 +14,5 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[webappwindows::default]
+      - recipe[settings::default]
     attributes:
-      sql_server:
-        sysadmins: ['vagrant']

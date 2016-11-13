@@ -1,0 +1,155 @@
+I, [2016-11-13T12:30:09.537212 #1048]  INFO -- Kitchen: -----> Starting Kitchen (v1.11.1)
+I, [2016-11-13T12:30:15.328797 #1048]  INFO -- Kitchen: -----> Creating <default-ubuntu-1404>...
+E, [2016-11-13T12:31:19.825313 #1048] ERROR -- Kitchen: ------Exception-------
+E, [2016-11-13T12:31:19.825313 #1048] ERROR -- Kitchen: Class: Kitchen::ActionFailed
+E, [2016-11-13T12:31:19.825313 #1048] ERROR -- Kitchen: Message: 1 actions failed.
+>>>>>>     Failed to complete #create action: [Expected process to exit with [0], but received '1'
+---- Begin output of vagrant up --no-provision --provider virtualbox ----
+STDOUT: Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Importing base box 'bento/ubuntu-14.04'...
+[KProgress: 10%[KProgress: 20%[KProgress: 40%[KProgress: 70%[KProgress: 90%[K==> default: Matching MAC address for NAT networking...
+==> default: Checking if box 'bento/ubuntu-14.04' is up to date...
+==> default: Setting the name of the VM: kitchen-motd-default-ubuntu-1404_default_1479065472941_62966
+==> default: Fixed port collision for 22 => 2222. Now on port 2200.
+==> default: Clearing any previously set network interfaces...
+==> default: Preparing network interfaces based on configuration...
+    default: Adapter 1: nat
+==> default: Forwarding ports...
+    default: 22 (guest) => 2200 (host) (adapter 1)
+==> default: Running 'pre-boot' VM customizations...
+==> default: Booting VM...
+STDERR: There was an error while executing `VBoxManage`, a CLI used by Vagrant
+for controlling VirtualBox. The command and stderr is shown below.
+
+Command: ["startvm", "da178394-1b69-4eef-9515-14c0145cd3aa", "--type", "headless"]
+
+Stderr: VBoxManage.exe: error: The configured driver wasn't found. Either the necessary driver modules wasn't loaded, the name was misspelled, or it was a misconfiguration. (VERR_PDM_DRIVER_NOT_FOUND)
+VBoxManage.exe: error: Details: code E_FAIL (0x80004005), component ConsoleWrap, interface IConsole
+---- End output of vagrant up --no-provision --provider virtualbox ----
+Ran vagrant up --no-provision --provider virtualbox returned 1] on default-ubuntu-1404
+E, [2016-11-13T12:31:19.826280 #1048] ERROR -- Kitchen: ----------------------
+E, [2016-11-13T12:31:19.826280 #1048] ERROR -- Kitchen: ------Backtrace-------
+E, [2016-11-13T12:31:19.826280 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/command.rb:187:in `report_errors'
+E, [2016-11-13T12:31:19.826280 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/command.rb:178:in `run_action'
+E, [2016-11-13T12:31:19.826280 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/command/action.rb:39:in `block in call'
+E, [2016-11-13T12:31:19.826280 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/2.1.0/benchmark.rb:279:in `measure'
+E, [2016-11-13T12:31:19.826280 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/command/action.rb:37:in `call'
+E, [2016-11-13T12:31:19.826280 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/cli.rb:56:in `perform'
+E, [2016-11-13T12:31:19.826280 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/cli.rb:185:in `block (2 levels) in <class:CLI>'
+E, [2016-11-13T12:31:19.826280 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/thor-0.19.1/lib/thor/command.rb:27:in `run'
+E, [2016-11-13T12:31:19.826280 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/thor-0.19.1/lib/thor/invocation.rb:126:in `invoke_command'
+E, [2016-11-13T12:31:19.826280 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/cli.rb:326:in `invoke_task'
+E, [2016-11-13T12:31:19.826280 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/thor-0.19.1/lib/thor.rb:359:in `dispatch'
+E, [2016-11-13T12:31:19.826280 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/thor-0.19.1/lib/thor/base.rb:440:in `start'
+E, [2016-11-13T12:31:19.826280 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/bin/kitchen:13:in `block in <top (required)>'
+E, [2016-11-13T12:31:19.826280 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/errors.rb:174:in `with_friendly_errors'
+E, [2016-11-13T12:31:19.826280 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/bin/kitchen:13:in `<top (required)>'
+E, [2016-11-13T12:31:19.826280 #1048] ERROR -- Kitchen: C:/opscode/chefdk/bin/kitchen:21:in `load'
+E, [2016-11-13T12:31:19.826280 #1048] ERROR -- Kitchen: C:/opscode/chefdk/bin/kitchen:21:in `<main>'
+E, [2016-11-13T12:31:19.826280 #1048] ERROR -- Kitchen: ----End Backtrace-----
+E, [2016-11-13T12:31:19.826280 #1048] ERROR -- Kitchen: -Composite Exception--
+E, [2016-11-13T12:31:19.826280 #1048] ERROR -- Kitchen: Class: Kitchen::ActionFailed
+E, [2016-11-13T12:31:19.827256 #1048] ERROR -- Kitchen: Message: Failed to complete #create action: [Expected process to exit with [0], but received '1'
+---- Begin output of vagrant up --no-provision --provider virtualbox ----
+STDOUT: Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Importing base box 'bento/ubuntu-14.04'...
+[KProgress: 10%[KProgress: 20%[KProgress: 40%[KProgress: 70%[KProgress: 90%[K==> default: Matching MAC address for NAT networking...
+==> default: Checking if box 'bento/ubuntu-14.04' is up to date...
+==> default: Setting the name of the VM: kitchen-motd-default-ubuntu-1404_default_1479065472941_62966
+==> default: Fixed port collision for 22 => 2222. Now on port 2200.
+==> default: Clearing any previously set network interfaces...
+==> default: Preparing network interfaces based on configuration...
+    default: Adapter 1: nat
+==> default: Forwarding ports...
+    default: 22 (guest) => 2200 (host) (adapter 1)
+==> default: Running 'pre-boot' VM customizations...
+==> default: Booting VM...
+STDERR: There was an error while executing `VBoxManage`, a CLI used by Vagrant
+for controlling VirtualBox. The command and stderr is shown below.
+
+Command: ["startvm", "da178394-1b69-4eef-9515-14c0145cd3aa", "--type", "headless"]
+
+Stderr: VBoxManage.exe: error: The configured driver wasn't found. Either the necessary driver modules wasn't loaded, the name was misspelled, or it was a misconfiguration. (VERR_PDM_DRIVER_NOT_FOUND)
+VBoxManage.exe: error: Details: code E_FAIL (0x80004005), component ConsoleWrap, interface IConsole
+---- End output of vagrant up --no-provision --provider virtualbox ----
+Ran vagrant up --no-provision --provider virtualbox returned 1] on default-ubuntu-1404
+E, [2016-11-13T12:31:19.827256 #1048] ERROR -- Kitchen: ----------------------
+E, [2016-11-13T12:31:19.827256 #1048] ERROR -- Kitchen: ------Backtrace-------
+E, [2016-11-13T12:31:19.827256 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/shell_out.rb:73:in `rescue in run_command'
+E, [2016-11-13T12:31:19.827256 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/shell_out.rb:61:in `run_command'
+E, [2016-11-13T12:31:19.827256 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/kitchen-vagrant-0.20.0/lib/kitchen/driver/vagrant.rb:343:in `run_command'
+E, [2016-11-13T12:31:19.827256 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/kitchen-vagrant-0.20.0/lib/kitchen/driver/vagrant.rb:302:in `run'
+E, [2016-11-13T12:31:19.827256 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/kitchen-vagrant-0.20.0/lib/kitchen/driver/vagrant.rb:373:in `run_vagrant_up'
+E, [2016-11-13T12:31:19.827256 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/kitchen-vagrant-0.20.0/lib/kitchen/driver/vagrant.rb:96:in `create'
+E, [2016-11-13T12:31:19.827256 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:449:in `public_send'
+E, [2016-11-13T12:31:19.827256 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:449:in `block in perform_action'
+E, [2016-11-13T12:31:19.827256 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:510:in `call'
+E, [2016-11-13T12:31:19.827256 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:510:in `block in synchronize_or_call'
+E, [2016-11-13T12:31:19.827256 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:508:in `synchronize'
+E, [2016-11-13T12:31:19.827256 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:508:in `synchronize_or_call'
+E, [2016-11-13T12:31:19.827256 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:478:in `block in action'
+E, [2016-11-13T12:31:19.827256 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/2.1.0/benchmark.rb:279:in `measure'
+E, [2016-11-13T12:31:19.827256 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:477:in `action'
+E, [2016-11-13T12:31:19.827256 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:449:in `perform_action'
+E, [2016-11-13T12:31:19.827256 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:359:in `create_action'
+E, [2016-11-13T12:31:19.827256 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:348:in `block in transition_to'
+E, [2016-11-13T12:31:19.827256 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:347:in `each'
+E, [2016-11-13T12:31:19.827256 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:347:in `transition_to'
+E, [2016-11-13T12:31:19.832140 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:127:in `create'
+E, [2016-11-13T12:31:19.832140 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/command.rb:201:in `public_send'
+E, [2016-11-13T12:31:19.832140 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/command.rb:201:in `run_action_in_thread'
+E, [2016-11-13T12:31:19.832140 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/command.rb:173:in `block (2 levels) in run_action'
+E, [2016-11-13T12:31:19.832140 #1048] ERROR -- Kitchen: ----End Backtrace-----
+E, [2016-11-13T12:31:19.832140 #1048] ERROR -- Kitchen: ---Nested Exception---
+E, [2016-11-13T12:31:19.832140 #1048] ERROR -- Kitchen: Class: Kitchen::ActionFailed
+E, [2016-11-13T12:31:19.832140 #1048] ERROR -- Kitchen: Message: Failed to complete #create action: [Expected process to exit with [0], but received '1'
+---- Begin output of vagrant up --no-provision --provider virtualbox ----
+STDOUT: Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Importing base box 'bento/ubuntu-14.04'...
+[KProgress: 10%[KProgress: 20%[KProgress: 40%[KProgress: 70%[KProgress: 90%[K==> default: Matching MAC address for NAT networking...
+==> default: Checking if box 'bento/ubuntu-14.04' is up to date...
+==> default: Setting the name of the VM: kitchen-motd-default-ubuntu-1404_default_1479065472941_62966
+==> default: Fixed port collision for 22 => 2222. Now on port 2200.
+==> default: Clearing any previously set network interfaces...
+==> default: Preparing network interfaces based on configuration...
+    default: Adapter 1: nat
+==> default: Forwarding ports...
+    default: 22 (guest) => 2200 (host) (adapter 1)
+==> default: Running 'pre-boot' VM customizations...
+==> default: Booting VM...
+STDERR: There was an error while executing `VBoxManage`, a CLI used by Vagrant
+for controlling VirtualBox. The command and stderr is shown below.
+
+Command: ["startvm", "da178394-1b69-4eef-9515-14c0145cd3aa", "--type", "headless"]
+
+Stderr: VBoxManage.exe: error: The configured driver wasn't found. Either the necessary driver modules wasn't loaded, the name was misspelled, or it was a misconfiguration. (VERR_PDM_DRIVER_NOT_FOUND)
+VBoxManage.exe: error: Details: code E_FAIL (0x80004005), component ConsoleWrap, interface IConsole
+---- End output of vagrant up --no-provision --provider virtualbox ----
+Ran vagrant up --no-provision --provider virtualbox returned 1]
+E, [2016-11-13T12:31:19.832140 #1048] ERROR -- Kitchen: ----------------------
+E, [2016-11-13T12:31:19.832140 #1048] ERROR -- Kitchen: ------Backtrace-------
+E, [2016-11-13T12:31:19.832140 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/shell_out.rb:73:in `rescue in run_command'
+E, [2016-11-13T12:31:19.832140 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/shell_out.rb:61:in `run_command'
+E, [2016-11-13T12:31:19.832140 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/kitchen-vagrant-0.20.0/lib/kitchen/driver/vagrant.rb:343:in `run_command'
+E, [2016-11-13T12:31:19.832140 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/kitchen-vagrant-0.20.0/lib/kitchen/driver/vagrant.rb:302:in `run'
+E, [2016-11-13T12:31:19.832140 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/kitchen-vagrant-0.20.0/lib/kitchen/driver/vagrant.rb:373:in `run_vagrant_up'
+E, [2016-11-13T12:31:19.832140 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/kitchen-vagrant-0.20.0/lib/kitchen/driver/vagrant.rb:96:in `create'
+E, [2016-11-13T12:31:19.832140 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:449:in `public_send'
+E, [2016-11-13T12:31:19.832140 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:449:in `block in perform_action'
+E, [2016-11-13T12:31:19.832140 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:510:in `call'
+E, [2016-11-13T12:31:19.832140 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:510:in `block in synchronize_or_call'
+E, [2016-11-13T12:31:19.832140 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:508:in `synchronize'
+E, [2016-11-13T12:31:19.833116 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:508:in `synchronize_or_call'
+E, [2016-11-13T12:31:19.833116 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:478:in `block in action'
+E, [2016-11-13T12:31:19.833116 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/2.1.0/benchmark.rb:279:in `measure'
+E, [2016-11-13T12:31:19.833116 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:477:in `action'
+E, [2016-11-13T12:31:19.833116 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:449:in `perform_action'
+E, [2016-11-13T12:31:19.833116 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:359:in `create_action'
+E, [2016-11-13T12:31:19.833116 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:348:in `block in transition_to'
+E, [2016-11-13T12:31:19.833116 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:347:in `each'
+E, [2016-11-13T12:31:19.833116 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:347:in `transition_to'
+E, [2016-11-13T12:31:19.833116 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:127:in `create'
+E, [2016-11-13T12:31:19.833116 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/command.rb:201:in `public_send'
+E, [2016-11-13T12:31:19.833116 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/command.rb:201:in `run_action_in_thread'
+E, [2016-11-13T12:31:19.833116 #1048] ERROR -- Kitchen: C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/command.rb:173:in `block (2 levels) in run_action'
+E, [2016-11-13T12:31:19.833116 #1048] ERROR -- Kitchen: ----End Backtrace-----

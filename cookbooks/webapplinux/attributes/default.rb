@@ -13,5 +13,3 @@ default['webapplinux']['database']['username'] = 'root'
 default['webapplinux']['database']['app']['username'] = 'db_admin'
 default['webapplinux']['database']['seed_file'] = '/tmp/create-tables.sql'
 
-
-

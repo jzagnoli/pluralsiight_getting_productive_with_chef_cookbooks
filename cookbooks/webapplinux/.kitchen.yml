@@ -1,6 +1,9 @@
 ---
 driver:
   name: vagrant
+  require_chef_omnibus: 12.13.37
+  network:
+    - ["private_network", {ip: "192.168.33.33"}]
 
 provisioner:
   name: chef_zero
@@ -9,14 +12,16 @@ verifier:
   name: inspec
 
 platforms:
-  - name: ubuntu-16.04
-  - name: centos-7.2
+  - name: ubuntu-14.04
 
 suites:
   - name: default
+    data_bags_path: "../../data_bags"
     run_list:
       - recipe[webapplinux::default]
-    verifier:
-      inspec_tests:
-        - test/recipes
+    provisioner:
+      encrypted_data_bag_secret_key_path: C:\Users\Dad\Documents\PluralsightChef\encrypted_data_bag_secret
     attributes:
+      webapplinux:
+        password:
+          secret_path: '/tmp/kitchen/encrypted_data_bag_secret'

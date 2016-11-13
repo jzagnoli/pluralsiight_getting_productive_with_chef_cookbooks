@@ -1,0 +1,7 @@
+DEPENDENCIES
+  settings
+    path: .
+    metadata: true
+
+GRAPH
+  settings (0.1.0)
