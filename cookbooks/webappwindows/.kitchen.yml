@@ -1,10 +1,14 @@
 ---
 driver:
   name: vagrant
+  require_chef_omnibus: 12.13.37
 
 provisioner:
   name: chef_zero_scheduled_task
 
+transport:
+  name: winrm
+  elevated: true
 verifier:
   name: inspec
 

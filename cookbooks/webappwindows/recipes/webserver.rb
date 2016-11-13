@@ -19,7 +19,7 @@ dsc_script "Web-Asp-Net45" do
     code <<-EOH
     WindowsFeature InstallAspDotNet45
     {
-        Name = "WWeb-Asp-Net45"
+        Name = "Web-Asp-Net45"
         Ensure = "Present"
     }
     EOH
